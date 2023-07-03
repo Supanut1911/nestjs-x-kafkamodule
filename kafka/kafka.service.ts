@@ -74,6 +74,7 @@ export class KafkaService implements OnModuleInit, OnModuleDestroy {
     await this.producer.disconnect();
     await this.consumer.disconnect();
     await this.fixedConsumer.disconnect();
+    console.log('yooo disconnect producer & consumer');
   }
 
   async bindAllTopicToConsumer(callback, _topic) {
@@ -85,7 +86,8 @@ export class KafkaService implements OnModuleInit, OnModuleDestroy {
   }
 
   async sendMessage(kafkaTopic: string, kafkaMessage: KafkaPayload) {
-    await this.producer.connect();
+    // await this.producer.connect();
+    console.log(this.producer);
     const metadata = await this.producer
       .send({
         topic: kafkaTopic,

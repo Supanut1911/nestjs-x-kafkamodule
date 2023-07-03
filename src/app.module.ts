@@ -10,8 +10,8 @@ import { KafkaModule } from 'kafka/kafka.module';
       clientId: 'nestjs-appY-kafkaModule',
       brokers: [
         process.env.KAFKA_BROKER_1,
-        process.env.KAFKA_BROKER_2,
-        process.env.KAFKA_BROKER_3,
+        // process.env.KAFKA_BROKER_2,
+        // process.env.KAFKA_BROKER_3,
       ],
       groupId: 'appYYYYYYYY.kafkaModule-consumer-group',
     }),
